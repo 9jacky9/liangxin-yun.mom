@@ -1,0 +1,1012 @@
+/* ==========================================================================
+   良心云 (liangxin-yun.mom) — 草本工坊与匠心臻选品质风
+   Botanical Apothecary & Artisanal Craft Seal Stylesheet
+   Palette:
+   - Organic Linen Cream: #FBF9F5
+   - Warm Parchment Card: #F3EFE6
+   - Deep Parchment Border: #DFD7C6
+   - Deep Botanical Charcoal: #1D2A22
+   - Muted Sage Text: #4B5B51
+   - Herbal Olive-Emerald: #2E6F40
+   - Artisanal Copper-Terracotta: #B85D3B
+   ========================================================================== */
+
+:root {
+  --bg-linen: #FBF9F5;
+  --bg-parchment: #F3EFE6;
+  --bg-card-inner: #FAF7F0;
+  --border-craft: #D9D0BE;
+  --border-accent: #C7B99E;
+  --text-charcoal: #1D2A22;
+  --text-sage: #49594F;
+  --text-muted: #6C7A70;
+  --herb-emerald: #2E6F40;
+  --herb-emerald-dark: #21522E;
+  --copper-seal: #B85D3B;
+  --copper-seal-dark: #964628;
+  --gold-wax: #C89B53;
+  --shadow-craft: 0 6px 22px rgba(29, 42, 34, 0.06);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Songti SC", "Noto Serif SC", "Source Han Serif SC", "PingFang SC", "Microsoft YaHei", serif;
+  background-color: var(--bg-linen);
+  color: var(--text-charcoal);
+  line-height: 1.78;
+  background-image: radial-gradient(rgba(184, 93, 59, 0.04) 1px, transparent 1px),
+                    radial-gradient(rgba(46, 111, 64, 0.03) 1px, var(--bg-linen) 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Sans-serif utility for UI badges, tables, numbers */
+.font-sans {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Global Link Rules: Prominent Copper-Terracotta, consistent before and after visited */
+a,
+a:visited {
+  color: var(--copper-seal);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1.5px;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--herb-emerald);
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   Header & Navigation (Desktop + Mobile Visible Wrap)
+   ========================================================================== */
+.site-header {
+  background-color: rgba(251, 249, 245, 0.96);
+  border-bottom: 2px double var(--border-craft);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(6px);
+}
+
+.header-topbar {
+  background-color: var(--text-charcoal);
+  color: #EAE4D7;
+  font-size: 0.78rem;
+  padding: 6px 0;
+  text-align: center;
+  letter-spacing: 0.06em;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.header-topbar span {
+  color: var(--gold-wax);
+  font-weight: 600;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.brand-logo,
+.brand-logo:visited {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-charcoal);
+}
+
+.brand-logo:hover {
+  color: var(--herb-emerald);
+}
+
+.brand-logo svg {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+}
+
+.brand-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 1.38rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-charcoal);
+  line-height: 1.2;
+}
+
+.brand-subtitle {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.main-nav a,
+.main-nav a:visited {
+  text-decoration: none;
+  color: var(--text-charcoal);
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.94rem;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--herb-emerald);
+  background-color: var(--bg-parchment);
+  border-color: var(--border-craft);
+}
+
+.main-nav a.nav-atelier,
+.main-nav a.nav-atelier:visited {
+  background-color: var(--herb-emerald);
+  color: #FFFFFF;
+  border-color: var(--herb-emerald);
+  font-weight: 600;
+}
+
+.main-nav a.nav-atelier:hover {
+  background-color: var(--herb-emerald-dark);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-section {
+  padding: 58px 0 64px;
+  border-bottom: 1px solid var(--border-craft);
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 44px;
+  align-items: center;
+}
+
+.craft-ribbon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--bg-parchment);
+  border: 1px solid var(--border-accent);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: var(--herb-emerald);
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-weight: 600;
+  margin-bottom: 18px;
+  letter-spacing: 0.04em;
+}
+
+.craft-ribbon-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--copper-seal);
+  display: inline-block;
+}
+
+.hero-content h1 {
+  font-size: 2.55rem;
+  line-height: 1.28;
+  color: var(--text-charcoal);
+  margin-bottom: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.hero-content h1 .highlight-seal {
+  color: var(--copper-seal);
+  border-bottom: 2px solid rgba(184, 93, 59, 0.35);
+}
+
+.hero-lead {
+  font-size: 1.08rem;
+  color: var(--text-sage);
+  margin-bottom: 26px;
+  line-height: 1.85;
+}
+
+.hero-pledge-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  background-color: var(--bg-parchment);
+  border: 1px solid var(--border-craft);
+  border-left: 4px solid var(--herb-emerald);
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 28px;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.pledge-item strong {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--text-charcoal);
+}
+
+.pledge-item span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.btn-primary,
+.btn-primary:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--copper-seal);
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-weight: 600;
+  font-size: 1.02rem;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--copper-seal-dark);
+  box-shadow: 0 4px 14px rgba(184, 93, 59, 0.25);
+  transition: transform 0.18s ease, background-color 0.18s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--copper-seal-dark);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-secondary,
+.btn-secondary:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--bg-parchment);
+  color: var(--herb-emerald);
+  text-decoration: none;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-weight: 600;
+  font-size: 1.02rem;
+  padding: 14px 24px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--herb-emerald);
+  transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--herb-emerald);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.hero-visual-frame {
+  background-color: var(--bg-parchment);
+  border: 2px solid var(--border-accent);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  box-shadow: var(--shadow-craft);
+  position: relative;
+}
+
+.hero-visual-frame::before {
+  content: "CERTIFIED IEPL · ARTISAN SEAL NO. 2026-08";
+  display: block;
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  border-bottom: 1px dashed var(--border-accent);
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.hero-anim-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-sm);
+}
+
+/* ==========================================================================
+   Section Scaffolding & Certificate Cards
+   ========================================================================== */
+.section-block {
+  padding: 68px 0;
+  border-bottom: 1px solid var(--border-craft);
+}
+
+.section-block.alt-bg {
+  background-color: rgba(243, 239, 230, 0.55);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 46px;
+}
+
+.section-kicker {
+  display: inline-block;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--copper-seal);
+  margin-bottom: 8px;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  color: var(--text-charcoal);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.section-header p {
+  color: var(--text-sage);
+  font-size: 1rem;
+}
+
+.cards-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.craft-card {
+  background-color: var(--bg-card-inner);
+  border: 1px solid var(--border-craft);
+  border-top: 3px solid var(--herb-emerald);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-craft);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.craft-card.copper-top {
+  border-top-color: var(--copper-seal);
+}
+
+.card-stamp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.card-icon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-parchment);
+  border: 1px solid var(--border-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon-badge svg {
+  width: 30px;
+  height: 30px;
+}
+
+.card-serial {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--copper-seal);
+  background-color: rgba(184, 93, 59, 0.09);
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+}
+
+.craft-card h3 {
+  font-size: 1.26rem;
+  color: var(--text-charcoal);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.craft-card p {
+  color: var(--text-sage);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.card-ledger-meta {
+  border-top: 1px dashed var(--border-craft);
+  padding-top: 12px;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.82rem;
+  color: var(--herb-emerald);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Pricing Section (Certificate Ledger Style)
+   ========================================================================== */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  background-color: var(--bg-card-inner);
+  border: 1.5px solid var(--border-craft);
+  border-radius: var(--radius-md);
+  padding: 32px 26px;
+  box-shadow: var(--shadow-craft);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--copper-seal);
+  background-color: #FFFDF9;
+  transform: translateY(-4px);
+}
+
+.pricing-seal-ribbon {
+  position: absolute;
+  top: -13px;
+  right: 22px;
+  background-color: var(--copper-seal);
+  color: #FFFFFF;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+}
+
+.pricing-tier-name {
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: var(--text-charcoal);
+  margin-bottom: 6px;
+}
+
+.pricing-tier-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.pricing-amount-box {
+  background-color: var(--bg-parchment);
+  border: 1px solid var(--border-craft);
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.price-currency {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--copper-seal);
+}
+
+.price-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-charcoal);
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1;
+}
+
+.price-cycle {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.pricing-spec-list {
+  list-style: none;
+  margin-bottom: 26px;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.pricing-spec-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px dashed var(--border-craft);
+  font-size: 0.92rem;
+  color: var(--text-sage);
+}
+
+.pricing-spec-list li svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.btn-block {
+  width: 100%;
+  text-align: center;
+}
+
+/* ==========================================================================
+   FAQ & Testimonials
+   ========================================================================== */
+.faq-ledger-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.faq-item {
+  background-color: var(--bg-card-inner);
+  border: 1px solid var(--border-craft);
+  border-left: 4px solid var(--copper-seal);
+  border-radius: var(--radius-sm);
+  padding: 22px 26px;
+  box-shadow: var(--shadow-craft);
+}
+
+.faq-item h3 {
+  font-size: 1.15rem;
+  color: var(--text-charcoal);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.faq-q-badge {
+  background-color: var(--herb-emerald);
+  color: #FFFFFF;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.faq-item p {
+  color: var(--text-sage);
+  font-size: 0.95rem;
+}
+
+.testimonial-card {
+  background-color: var(--bg-card-inner);
+  border: 1px solid var(--border-craft);
+  border-radius: var(--radius-md);
+  padding: 26px 24px;
+  box-shadow: var(--shadow-craft);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-quote {
+  font-size: 0.96rem;
+  color: var(--text-sage);
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-craft);
+  padding-top: 14px;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.author-info strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--text-charcoal);
+}
+
+.author-info span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.author-seal {
+  font-size: 0.75rem;
+  color: var(--herb-emerald);
+  border: 1px solid var(--herb-emerald);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Article & Hub Layouts
+   ========================================================================== */
+.page-banner {
+  background-color: var(--bg-parchment);
+  border-bottom: 1px solid var(--border-craft);
+  padding: 46px 0;
+  text-align: center;
+}
+
+.page-banner h1 {
+  font-size: 2.2rem;
+  color: var(--text-charcoal);
+  margin-bottom: 12px;
+}
+
+.page-banner p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--text-sage);
+  font-size: 1.02rem;
+}
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  padding: 56px 0;
+}
+
+.article-card {
+  background-color: var(--bg-card-inner);
+  border: 1px solid var(--border-craft);
+  border-top: 3px solid var(--copper-seal);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  box-shadow: var(--shadow-craft);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article-meta-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.article-tag {
+  background-color: var(--bg-parchment);
+  color: var(--herb-emerald);
+  border: 1px solid var(--border-accent);
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.article-card h2 {
+  font-size: 1.32rem;
+  line-height: 1.42;
+  margin-bottom: 12px;
+}
+
+.article-card h2 a,
+.article-card h2 a:visited {
+  color: var(--text-charcoal);
+  text-decoration: none;
+}
+
+.article-card h2 a:hover {
+  color: var(--copper-seal);
+}
+
+.article-card p {
+  color: var(--text-sage);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.article-readmore,
+.article-readmore:visited {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--copper-seal);
+  text-decoration: underline;
+}
+
+/* Single Article Content */
+.article-wrapper {
+  max-width: 840px;
+  margin: 48px auto 64px;
+  background-color: var(--bg-card-inner);
+  border: 1px solid var(--border-craft);
+  border-radius: var(--radius-md);
+  padding: 44px 48px;
+  box-shadow: var(--shadow-craft);
+}
+
+.article-header {
+  border-bottom: 2px double var(--border-craft);
+  padding-bottom: 24px;
+  margin-bottom: 30px;
+}
+
+.article-breadcrumb {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.article-header h1 {
+  font-size: 1.95rem;
+  line-height: 1.38;
+  color: var(--text-charcoal);
+  margin-bottom: 14px;
+}
+
+.article-byline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+.article-body h2 {
+  font-size: 1.42rem;
+  color: var(--text-charcoal);
+  margin: 32px 0 14px;
+  padding-left: 12px;
+  border-left: 4px solid var(--herb-emerald);
+  line-height: 1.35;
+}
+
+.article-body h3 {
+  font-size: 1.16rem;
+  color: var(--copper-seal-dark);
+  margin: 22px 0 10px;
+  line-height: 1.4;
+}
+
+.article-body p {
+  font-size: 1.02rem;
+  color: var(--text-charcoal);
+  margin-bottom: 18px;
+  line-height: 1.88;
+  text-align: justify;
+}
+
+.article-body ul,
+.article-body ol {
+  margin: 0 0 20px 24px;
+  color: var(--text-charcoal);
+}
+
+.article-body li {
+  margin-bottom: 8px;
+  line-height: 1.75;
+}
+
+.article-cta-box {
+  background-color: var(--bg-parchment);
+  border: 1.5px solid var(--border-accent);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  margin: 34px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.article-cta-box h3 {
+  margin: 0 0 6px;
+  color: var(--text-charcoal);
+}
+
+.article-cta-box p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-sage);
+}
+
+.related-section {
+  margin-top: 44px;
+  padding-top: 28px;
+  border-top: 2px double var(--border-craft);
+}
+
+.related-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+  color: var(--text-charcoal);
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.related-item {
+  background-color: var(--bg-parchment);
+  border: 1px solid var(--border-craft);
+  padding: 16px;
+  border-radius: var(--radius-sm);
+}
+
+.related-item a,
+.related-item a:visited {
+  font-weight: 600;
+  color: var(--copper-seal);
+  font-size: 0.96rem;
+}
+
+/* ==========================================================================
+   Footer (Strictly Chinese Only & 4 Required Links)
+   ========================================================================== */
+.site-footer {
+  background-color: var(--bg-parchment);
+  border-top: 2px double var(--border-craft);
+  padding: 36px 0;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.footer-links a,
+.footer-links a:visited {
+  color: var(--copper-seal);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--herb-emerald);
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+/* ==========================================================================
+   Responsive Design (Mobile Navigation MUST remain visible!)
+   ========================================================================== */
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .cards-grid-3,
+  .pricing-grid,
+  .hub-grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing-card.featured {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  /* Strictly keep navigation menu visible and wrapped cleanly on mobile */
+  .main-nav {
+    display: flex !important;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .main-nav a,
+  .main-nav a:visited {
+    font-size: 0.86rem;
+    padding: 6px 11px;
+    background-color: var(--bg-parchment);
+    border: 1px solid var(--border-craft);
+  }
+  .hero-content h1 {
+    font-size: 1.9rem;
+  }
+  .hero-pledge-bar {
+    grid-template-columns: 1fr;
+  }
+  .article-wrapper {
+    padding: 26px 20px;
+    margin: 24px auto 40px;
+  }
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}

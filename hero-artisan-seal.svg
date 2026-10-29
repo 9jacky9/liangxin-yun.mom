@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="parchmentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF6ED" />
+      <stop offset="100%" stop-color="#EFE8D8" />
+    </linearGradient>
+    <linearGradient id="copperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CE714E" />
+      <stop offset="100%" stop-color="#9E4727" />
+    </linearGradient>
+    <linearGradient id="herbGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3B8450" />
+      <stop offset="100%" stop-color="#235331" />
+    </linearGradient>
+    <linearGradient id="goldBrass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B6863C" />
+      <stop offset="50%" stop-color="#E3BA73" />
+      <stop offset="100%" stop-color="#A6762E" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#1D2A22" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Background Certificate Frame -->
+  <rect x="12" y="12" width="616" height="456" rx="12" fill="url(#parchmentGrad)" stroke="#C7B99E" stroke-width="2" />
+  <rect x="24" y="24" width="592" height="432" rx="8" fill="none" stroke="#B85D3B" stroke-width="1" stroke-dasharray="6 4" />
+
+  <!-- Corner Botanical Ornaments -->
+  <g stroke="#2E6F40" stroke-width="1.5" fill="none" opacity="0.55">
+    <path d="M 36 60 L 36 36 L 60 36" />
+    <path d="M 604 60 L 604 36 L 580 36" />
+    <path d="M 36 420 L 36 444 L 60 444" />
+    <path d="M 604 420 L 604 444 L 580 444" />
+  </g>
+
+  <!-- Top Ledger Header -->
+  <g transform="translate(320, 56)" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+    <text y="0" font-size="13" fill="#B85D3B" font-weight="700" letter-spacing="3">良心工坊 · 足额带宽与纯净原生IP天平鉴证</text>
+    <text y="20" font-size="11" fill="#5B6B60" letter-spacing="1">IEPL DEDICATED LINE · 1:1 UNCOMPRESSED BANDWIDTH LEDGER</text>
+  </g>
+
+  <!-- Rotating Outer Craft Seal Ring -->
+  <g transform="translate(320, 238)">
+    <circle r="136" fill="none" stroke="#D5C8B0" stroke-width="1.5" />
+    <circle r="126" fill="none" stroke="#2E6F40" stroke-width="1.2" stroke-dasharray="10 6">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="36s" repeatCount="indefinite" />
+    </circle>
+    <circle r="112" fill="none" stroke="#B85D3B" stroke-width="1" stroke-dasharray="4 8">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="28s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Botanical Signal Arcs (Left to Right Pure Transmission) -->
+  <path id="signalPathLeft" d="M 92 250 Q 200 135 320 175" fill="none" stroke="#2E6F40" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.5" />
+  <path id="signalPathRight" d="M 320 175 Q 440 135 548 250" fill="none" stroke="#B85D3B" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.5" />
+
+  <circle r="5" fill="#2E6F40">
+    <animateMotion dur="3.6s" repeatCount="indefinite" path="M 92 250 Q 200 135 320 175" />
+  </circle>
+  <circle r="5" fill="#B85D3B">
+    <animateMotion dur="3.6s" begin="1.8s" repeatCount="indefinite" path="M 320 175 Q 440 135 548 250" />
+  </circle>
+
+  <!-- Central Artisanal Balance Scale Pillar -->
+  <g transform="translate(320, 238)" filter="url(#softShadow)">
+    <!-- Base Pedestal -->
+    <path d="M -64 118 L 64 118 L 50 102 L -50 102 Z" fill="url(#goldBrass)" stroke="#7A541E" stroke-width="1.2" />
+    <rect x="-32" y="94" width="64" height="10" rx="3" fill="#2E6F40" />
+    <!-- Vertical Pillar -->
+    <rect x="-7" y="-68" width="14" height="164" rx="4" fill="url(#goldBrass)" stroke="#7A541E" stroke-width="1.2" />
+    
+    <!-- Oscillating Balance Beam Group (Symbolizing Zero Overselling & Fair Weight) -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="-3.5,0,-58; 3.5,0,-58; -3.5,0,-58" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" />
+      
+      <!-- Horizontal Beam -->
+      <path d="M -165 -58 L 165 -58" stroke="url(#goldBrass)" stroke-width="8" stroke-linecap="round" />
+      <path d="M -150 -58 L 150 -58" stroke="#7A541E" stroke-width="1.2" />
+
+      <!-- Left Pan: 100% Pure Native IP -->
+      <g transform="translate(-155, -58)">
+        <line x1="0" y1="0" x2="-34" y2="76" stroke="#8C6226" stroke-width="1.6" />
+        <line x1="0" y1="0" x2="34" y2="76" stroke="#8C6226" stroke-width="1.6" />
+        <path d="M -48 76 Q 0 98 48 76 Z" fill="url(#herbGrad)" stroke="#1D2A22" stroke-width="1.2" />
+        <rect x="-44" y="44" width="88" height="28" rx="5" fill="#FBF9F5" stroke="#2E6F40" stroke-width="1.5" />
+        <text x="0" y="62" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="700" fill="#2E6F40">原生纯净IP</text>
+      </g>
+
+      <!-- Right Pan: 1:1 Uncompressed IEPL -->
+      <g transform="translate(155, -58)">
+        <line x1="0" y1="0" x2="-34" y2="76" stroke="#8C6226" stroke-width="1.6" />
+        <line x1="0" y1="0" x2="34" y2="76" stroke="#8C6226" stroke-width="1.6" />
+        <path d="M -48 76 Q 0 98 48 76 Z" fill="url(#copperGrad)" stroke="#1D2A22" stroke-width="1.2" />
+        <rect x="-44" y="44" width="88" height="28" rx="5" fill="#FBF9F5" stroke="#B85D3B" stroke-width="1.5" />
+        <text x="0" y="62" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="700" fill="#B85D3B">足额IEPL专线</text>
+      </g>
+    </g>
+
+    <!-- Central Wax Seal Emblem on Pivot -->
+    <circle cx="0" cy="-58" r="24" fill="url(#copperGrad)" stroke="#FBF9F5" stroke-width="2.5" />
+    <circle cx="0" cy="-58" r="19" fill="none" stroke="#F3EFE6" stroke-width="1" stroke-dasharray="3 2" />
+    <text x="0" y="-53" text-anchor="middle" font-family="Songti SC, serif" font-size="14" font-weight="700" fill="#FFFFFF">良心</text>
+  </g>
+
+  <!-- Bottom Live Telemetry Badges -->
+  <g transform="translate(52, 386)" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+    <!-- Badge 1 -->
+    <rect x="0" y="0" width="164" height="44" rx="6" fill="#FBF9F5" stroke="#C7B99E" stroke-width="1.2" />
+    <circle cx="20" cy="22" r="5" fill="#2E6F40">
+      <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="34" y="19" font-size="10" fill="#6C7A70">带宽兑付标准</text>
+    <text x="34" y="34" font-size="12" font-weight="700" fill="#1D2A22">1:1 零倍率虚标</text>
+
+    <!-- Badge 2 -->
+    <rect x="186" y="0" width="164" height="44" rx="6" fill="#FBF9F5" stroke="#C7B99E" stroke-width="1.2" />
+    <circle cx="206" cy="22" r="5" fill="#B85D3B">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="220" y="19" font-size="10" fill="#6C7A70">隐私安全底座</text>
+    <text x="220" y="34" font-size="12" font-weight="700" fill="#1D2A22">无盘RAM零日志</text>
+
+    <!-- Badge 3 -->
+    <rect x="372" y="0" width="164" height="44" rx="6" fill="#FBF9F5" stroke="#C7B99E" stroke-width="1.2" />
+    <circle cx="392" cy="22" r="5" fill="#2E6F40">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <text x="406" y="19" font-size="10" fill="#6C7A70">跨境平均响应</text>
+    <text x="406" y="34" font-size="12" font-weight="700" fill="#1D2A22">18.4ms 极速秒开</text>
+  </g>
+</svg>
