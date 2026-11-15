@@ -59,7 +59,7 @@
         <p>当您通过良心云的IEPL专线或原生IP节点访问互联网时，我们<strong>不记录</strong>您的源IP地址、<strong>不记录</strong>您所分配的节点出口IP时间戳关联信息、<strong>不记录</strong>您的DNS域名解析请求、<strong>不记录</strong>您访问的目标网站URL或任何传输数据包载荷内容。</p>
 
         <h2>二、技术保障：无盘RAM内存服务器如何杜绝日志留存</h2>
-        <p>我们深知仅靠口头承诺不足以建立绝对信任。因此，良心云全线边缘转发节点均采用<strong>无盘RAM（纯内存运行）服务器架构</strong>（详见技术专栏文章《<a href="ram-disk-zero-log-server-architecture.html">从口头承诺到技术落地：无盘RAM内存服务器如何从物理层面实现“零日志”？</a>》）：</p>
+        <p>我们深知仅靠口头承诺不足以建立绝对信任。因此，良心云全线边缘转发节点均采用<strong>无盘RAM（纯内存运行）服务器架构</strong>（详见技术专栏文章《<a href="ram-disk-zero-log-server-architecture.html">配置更新失败、节点全红：服务端故障与本地问题怎么区分</a>》）：</p>
         <ul>
           <li>所有边缘节点机箱内部均不安装HDD机械硬盘或SSD固态硬盘，系统镜像通过只读安全网络引导直接加载至DDR4/DDR5高速易失性内存中运行；</li>
           <li>系统内核层面彻底移除了 syslog、rsyslog 与 journald 等日志守护进程，将全部网络转发状态输出重定向至 <code>/dev/null</code> 空设备；</li>
